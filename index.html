@@ -123,37 +123,39 @@
 
    <section class="additional-projects">
   <h3 class="section-title">Additional Projects</h3>
-  <div id="project-grid" class="project-grid">
-    <!-- These placeholders will be replaced by JS -->
-    <div class="project-item" data-id="925179390" data-url="https://music.apple.com/us/album/culture-junky/925179390" data-title="Culture Junky"></div>
-    <div class="project-item" data-id="1139885030" data-url="https://music.apple.com/us/album/m-a-o-t-p-pt-1/1139885030" data-title="M A O T P Pt. 1"></div>
-    <div class="project-item" data-id="1434343374" data-url="https://music.apple.com/us/album/freedom-summer/1434343374" data-title="Freedom Summer"></div>
-    <div class="project-item" data-id="1567252797" data-url="https://music.apple.com/us/album/i-wish-you-love/1567252797" data-title="I Wish You Love"></div>
+  <div class="embed-item">
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0" height="450"
+            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/album/culture-junky/925179390">
+    </iframe>
+  </div>
+  <div class="embed-item">
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0" height="450"
+            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/album/m-a-o-t-p-pt-1/1139885030">
+    </iframe>
+  </div>
+  <div class="embed-item">
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0" height="450"
+            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/album/freedom-summer/1434343374">
+    </iframe>
+  </div>
+  <div class="embed-item">
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0" height="450"
+            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/album/i-wish-you-love/1567252797">
+    </iframe>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.project-item');
-    items.forEach(el => {
-      const id = el.dataset.id;
-      const link = el.dataset.url;
-      const title = el.dataset.title;
-      fetch(`https://itunes.apple.com/lookup?id=${id}`)
-        .then(res => res.json())
-        .then(data => {
-          const art = data.results[0].artworkUrl600;
-          el.innerHTML = `
-            <a href="${link}" target="_blank">
-              <img src="${art}" alt="${title} cover">
-              <span>${title}</span>
-            </a>
-          `;
-        })
-        .catch(console.error);
-    });
-  });
-</script>
 
     <footer>
       <p>Email: <a href="mailto:ChrisHunter@AudioSuiteRecordings.com">ChrisHunter@AudioSuiteRecordings.com</a></p>
