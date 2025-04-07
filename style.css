@@ -8,11 +8,13 @@ body {
   position: relative;
 }
 
-/* Top Accent Bar */
+/* Top Accent Bar (within content-box width) */
 .top-accent {
   height: 8px;
   background: linear-gradient(90deg, #0077cc, #00aabb);
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  max-width: 900px;
+  border-radius: 4px;
 }
 
 /* Content Box */
@@ -20,6 +22,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   background-color: white;
+  /* To enable slight transparency, uncomment the next line */
+  /* background-color: rgba(255, 255, 255, 0.95); */
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -43,7 +47,15 @@ body {
   right: 5px;
 }
 
-/* Headers & Sections */
+/* Header - Add Color Above About */
+.content-box header {
+  background-color: #e0f7fa;  /* Light blue tone */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Headers & Section Titles */
 header,
 section,
 footer {
@@ -93,11 +105,11 @@ h2 {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  font-size: 1.05em;
 }
 .services-list div {
   padding: 8px 0;
   border-bottom: 1px solid #ddd;
-  font-size: 1.05em;
 }
 .services-list div:last-child {
   border-bottom: none;
@@ -114,6 +126,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 15px;
+  justify-content: center;
 }
 .book img {
   width: 80px;
