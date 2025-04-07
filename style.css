@@ -208,6 +208,9 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
 .additional-projects {
   margin-top: 40px;
 }
+.additional-projects {
+  margin-top: 40px;
+}
 .additional-projects .section-title {
   font-size: 1.6em;
   font-weight: bold;
@@ -223,8 +226,6 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   justify-items: center;
 }
 .project-item {
-  text-decoration: none;
-  color: inherit;
   text-align: center;
 }
 .project-item img {
@@ -241,7 +242,9 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   display: block;
   margin-top: 8px;
   font-size: 0.9em;
+  color: #333;
 }
+
 
 /* Footer */
 footer {
