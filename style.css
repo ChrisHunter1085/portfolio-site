@@ -143,6 +143,20 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   margin-left: 5px;
 }
 
+/* Tape Sync Section */
+.tapesync {
+  margin-top: 30px;
+}
+.tapesync-embed {
+  max-width: 660px;
+  margin: 0 auto;
+}
+.timestamp {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
 /* Divider */
 .divider {
   border: none;
@@ -163,14 +177,19 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   margin-top: 8px;
 }
 
-/* SoundCloud & Video */
-.soundcloud-section iframe,
+/* Video Section */
 .video-section iframe {
   margin-top: 20px;
   max-width: 100%;
 }
 
-/* Side Labels – Diagonal, Centered, Gray */
+/* SoundCloud */
+.soundcloud-section iframe {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Side Labels */
 .side-label {
   position: fixed;
   top: 50%;
@@ -182,12 +201,8 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   opacity: 0.8;
   font-weight: bold;
 }
-.side-label.left {
-  left: -20px;
-}
-.side-label.right {
-  right: -20px;
-}
+.side-label.left { left: -20px; }
+.side-label.right { right: -20px; }
 
 /* Footer */
 footer {
