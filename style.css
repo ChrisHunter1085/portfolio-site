@@ -17,17 +17,37 @@ body {
   border-radius: 4px;
 }
 
-/* Content Box */
+/* Content Box with animated wave background */
 .content-box {
   max-width: 900px;
   margin: 0 auto;
   background-color: white;
-  /* To enable slight transparency, uncomment the next line */
-  /* background-color: rgba(255, 255, 255, 0.95); */
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sound-wave animated background layer */
+.content-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='600' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q 50 0 100 50 T 200 50 T 300 50 T 400 50 T 500 50 T 600 50' stroke='%23e0e0e0' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
+  opacity: 0.3;
+  animation: wave 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Wave animation keyframes */
+@keyframes wave {
+  from { transform: translateX(0); }
+  to   { transform: translateX(50%); }
 }
 
 /* Side Labels */
@@ -47,9 +67,9 @@ body {
   right: 5px;
 }
 
-/* Header - Add Color Above About */
+/* Header - colored background inside box */
 .content-box header {
-  background-color: #e0f7fa;  /* Light blue tone */
+  background-color: #e0f7fa;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
