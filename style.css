@@ -192,6 +192,41 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   margin-top: 20px;
   max-width: 100%;
 }
+/* Subwoofer pumping animation */
+@keyframes pump {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.1); }
+}
+
+.subwoofer {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 8px;
+  background: url('subwoofer.png') no-repeat center center;
+  background-size: contain;
+  animation: pump 1s ease-in-out infinite;
+}
+
+/* Side Labels – updated to include subwoofer above text */
+.side-label {
+  position: fixed;
+  top: 50%;
+  font-size: 1.8em;
+  color: #aaa;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.side-label.left {
+  left: 10px;
+}
+.side-label.right {
+  right: 10px;
+}
 
 /* Side Labels – Centered on each side */
 .side-label {
