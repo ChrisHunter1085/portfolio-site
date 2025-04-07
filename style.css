@@ -193,18 +193,24 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   max-width: 100%;
 }
 
-/* Side Labels - Straight, centered */
+/* Side Labels – Centered on each side */
 .side-label {
   position: fixed;
   top: 50%;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #aaa;
   transform: translateY(-50%);
   opacity: 0.8;
   font-weight: bold;
+  text-align: center;
 }
-.side-label.left { left: 0; }
-.side-label.right { right: 0; }
+.side-label.left {
+  left: 10px;
+}
+.side-label.right {
+  right: 10px;
+}
+
 .additional-projects {
   margin-top: 40px;
 }
