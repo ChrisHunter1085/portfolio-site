@@ -9,11 +9,11 @@ body {
 .content-box {
   max-width: 900px;
   margin: 0 auto;
-  /* Optional transparency—uncomment to enable */
-  /* background-color: rgba(255,255,255,0.95); */
   background-color: white;
+  /* To enable a slight transparency, uncomment the next line */
+  /* background-color: rgba(255, 255, 255, 0.95); */
   padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 10px;
 }
@@ -24,11 +24,14 @@ footer {
   margin-bottom: 30px;
 }
 
-h1,
-h2,
-h3 {
+/* Section Titles - Bold and Underlined */
+.section-title {
   color: #222;
-  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ddd;
 }
 
 .email-top {
@@ -36,11 +39,14 @@ h3 {
   margin-top: 5px;
 }
 
-/* Services Section */
+/* Services Section - New styling */
 .services {
-  background-color: #fafafa;
   padding: 20px;
   border-radius: 8px;
+  margin-bottom: 30px;
+  /* Optional: add a subtle background or border */
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
 }
 .services h3 {
   margin-bottom: 15px;
@@ -52,6 +58,7 @@ h3 {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  font-size: 1.1em;
 }
 .services-list div {
   padding: 8px 0;
@@ -81,21 +88,21 @@ h3 {
   border-radius: 5px;
 }
 
-/* Preview note */
+/* Preview note style */
 .note {
   font-size: 0.9em;
   color: #666;
   margin-left: 5px;
 }
 
-/* Divider */
+/* Divider between sections */
 .divider {
   border: none;
   border-top: 1px solid #ccc;
   margin: 20px 0;
 }
 
-/* Gateway embeds */
+/* Gateway embeds styling */
 .gateway-embeds {
   display: flex;
   flex-direction: column;
@@ -108,7 +115,7 @@ h3 {
   margin-top: 8px;
 }
 
-/* SoundCloud & Video margins */
+/* SoundCloud & Video Section */
 .soundcloud-section iframe,
 .video-section iframe {
   margin-top: 20px;
