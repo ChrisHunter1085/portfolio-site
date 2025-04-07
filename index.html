@@ -121,28 +121,39 @@
       </iframe>
     </section>
 
-    <section class="additional-projects">
+   <section class="additional-projects">
   <h3 class="section-title">Additional Projects</h3>
-  <div class="project-grid">
-    <a href="https://music.apple.com/us/album/culture-junky/925179390" target="_blank" class="project-item">
-    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/1a/2b/3c/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d/cover.jpg/600x600bb.jpg" alt="Culture Junky cover">
-      <span>Culture Junky</span>
-    </a>
-    <a href="https://music.apple.com/us/album/m-a-o-t-p-pt-1/1139885030" target="_blank" class="project-item">
-    <img src="https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/2f/1e/3d/2f1e3d4c-5a6b-7c8d-9e0f-1a2b3c4d5e6f/cover.jpg/600x600bb.jpg" alt="M A O T P Pt. 1 cover">
-      <span>M A O T P Pt. 1</span>
-    </a>
-    <a href="https://music.apple.com/us/album/freedom-summer/1434343374" target="_blank" class="project-item">
-    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/2a/b3/c4/2ab3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d/cover.jpg/600x600bb.jpg" alt="Freedom Summer cover">
-      <span>Freedom Summer</span>
-    </a>
-    <a href="https://music.apple.com/us/album/i-wish-you-love/1567252797" target="_blank" class="project-item">
-    <img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/3b/cd/ef/3bcdefab-1a23-4b56-7c8d-9e0f1a2b3c4d/cover.jpg/600x600bb.jpg" alt="I Wish You Love cover">
-      <span>I Wish You Love</span>
-    </a>
+  <div id="project-grid" class="project-grid">
+    <!-- These placeholders will be replaced by JS -->
+    <div class="project-item" data-id="925179390" data-url="https://music.apple.com/us/album/culture-junky/925179390" data-title="Culture Junky"></div>
+    <div class="project-item" data-id="1139885030" data-url="https://music.apple.com/us/album/m-a-o-t-p-pt-1/1139885030" data-title="M A O T P Pt. 1"></div>
+    <div class="project-item" data-id="1434343374" data-url="https://music.apple.com/us/album/freedom-summer/1434343374" data-title="Freedom Summer"></div>
+    <div class="project-item" data-id="1567252797" data-url="https://music.apple.com/us/album/i-wish-you-love/1567252797" data-title="I Wish You Love"></div>
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.project-item');
+    items.forEach(el => {
+      const id = el.dataset.id;
+      const link = el.dataset.url;
+      const title = el.dataset.title;
+      fetch(`https://itunes.apple.com/lookup?id=${id}`)
+        .then(res => res.json())
+        .then(data => {
+          const art = data.results[0].artworkUrl600;
+          el.innerHTML = `
+            <a href="${link}" target="_blank">
+              <img src="${art}" alt="${title} cover">
+              <span>${title}</span>
+            </a>
+          `;
+        })
+        .catch(console.error);
+    });
+  });
+</script>
 
     <footer>
       <p>Email: <a href="mailto:ChrisHunter@AudioSuiteRecordings.com">ChrisHunter@AudioSuiteRecordings.com</a></p>
