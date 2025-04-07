@@ -1,11 +1,11 @@
-/* Base Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body */
 body {
   font-family: Arial, sans-serif;
   background: #f9fafb;
@@ -24,7 +24,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Section Styling */
+/* Sections */
 .section {
   margin-bottom: 2rem;
 }
@@ -40,7 +40,7 @@ body {
   color: #6b7280;
 }
 
-/* Audiobook List */
+/* Audiobooks */
 .audiobook-list {
   display: flex;
   flex-direction: column;
@@ -54,7 +54,6 @@ body {
 
 .cover {
   width: 96px;
-  height: auto;
   border-radius: 0.5rem;
   margin-right: 1rem;
 }
@@ -72,7 +71,7 @@ body {
   margin: 2rem 0;
 }
 
-/* Embed Styling */
+/* Embeds */
 .embed {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -83,7 +82,7 @@ body {
   width: 100%;
 }
 
-/* Grid for Gateway Embeds */
+/* Grid for embeds */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -96,7 +95,7 @@ body {
   }
 }
 
-/* Caption for Music Embeds */
+/* Caption */
 .caption {
   font-size: 0.875rem;
   color: #6b7280;
