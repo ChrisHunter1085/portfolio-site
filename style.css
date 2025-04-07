@@ -228,16 +228,26 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   right: 10px;
 }
 
-/* Side Labels – Centered on each side */
+/* Pump animation */
+@keyframes pump {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.1); }
+}
+
+/* Side Labels – Centered on each side with pumping subwoofer */
 .side-label {
   position: fixed;
   top: 50%;
-  font-size: 1.8em;
-  color: #aaa;
   transform: translateY(-50%);
-  opacity: 0.8;
+  color: #aaa;
+  font-size: 1.8em;
   font-weight: bold;
   text-align: center;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
 }
 .side-label.left {
   left: 10px;
@@ -246,19 +256,12 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   right: 10px;
 }
 
-.additional-projects {
-  margin-top: 40px;
-}
-.additional-projects {
-  margin-top: 40px;
-}
-.additional-projects .section-title {
-  font-size: 1.6em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.embed-item {
-  margin-bottom: 30px;
+/* Subwoofer image styling with pump animation */
+.subwoofer-img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 8px;
+  animation: pump 1s ease-in-out infinite;
 }
 
 /* Footer */
