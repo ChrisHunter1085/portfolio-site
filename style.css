@@ -239,30 +239,21 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  color: #aaa;
-  font-size: 1.8em;
-  font-weight: bold;
-  text-align: center;
-  opacity: 0.8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.side-label.left {
-  left: 10px;
-}
-.side-label.right {
-  right: 10px;
-}
+.side-label.left { left: 10px; }
+.side-label.right { right: 10px; }
 
 /* Subwoofer image styling with pump animation */
 .subwoofer-img {
   width: 60px;
   height: auto;
-  margin-bottom: 8px;
   animation: pump 1s ease-in-out infinite;
 }
+
 
 /* Footer */
 footer {
