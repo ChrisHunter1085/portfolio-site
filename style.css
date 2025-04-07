@@ -207,42 +207,21 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   animation: pump 1s ease-in-out infinite;
 }
 
-/* Side Labels – updated to include subwoofer above text */
-.side-label {
-  position: fixed;
-  top: 50%;
-  font-size: 1.8em;
-  color: #aaa;
-  transform: translateY(-50%);
-  opacity: 0.8;
-  font-weight: bold;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.side-label.left {
-  left: 10px;
-}
-.side-label.right {
-  right: 10px;
-}
-
 /* Pump animation */
 @keyframes pump {
   0%, 100% { transform: scale(1); }
   50%       { transform: scale(1.1); }
 }
 
-/* Side Labels – Centered on each side with pumping subwoofer */
+/* Side Labels – Centered on each side with icon above text */
 .side-label {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  pointer-events: none;
 }
 .side-label.left { left: 10px; }
 .side-label.right { right: 10px; }
@@ -251,8 +230,19 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
 .subwoofer-img {
   width: 60px;
   height: auto;
+  margin-bottom: 8px;
   animation: pump 1s ease-in-out infinite;
 }
+
+/* Label text styling */
+.label-text {
+  color: #aaa;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+
 
 
 /* Footer */
