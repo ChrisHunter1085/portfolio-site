@@ -170,22 +170,23 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   max-width: 100%;
 }
 
-/* Side Labels – Diagonal, Centered, Colored */
+/* Side Labels – Diagonal, Centered, Gray */
 .side-label {
   position: fixed;
   top: 50%;
-  font-size: 1.2em;
-  color: #0077cc;
+  font-size: 1.5em;
+  color: #aaa;
   writing-mode: vertical-rl;
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
   opacity: 0.8;
   font-weight: bold;
 }
 .side-label.left {
-  left: 0;
+  left: -20px;
 }
 .side-label.right {
-  right: 0;
+  right: -20px;
 }
 
 /* Footer */
