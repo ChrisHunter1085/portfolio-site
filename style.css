@@ -213,7 +213,17 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   50%       { transform: scale(1.1); }
 }
 
-/* Side Labels – Icon above text, centered vertically */
+/* Keyframe for pumping animation */
+@keyframes pump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Side labels pinned to sides, centered vertically, big text */
 .side-label {
   position: fixed;
   top: 50%;
@@ -221,30 +231,29 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;
-  width: 120px; /* enough to contain icon and text */
+  font-size: 1.8em;       /* Large text size */
+  color: #aaa;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.8;
+  pointer-events: none;  /* so clicks pass through */
 }
-.side-label.left { left: 0; }
-.side-label.right { right: 0; }
 
-/* Subwoofer image styling */
+/* Left and right positioning */
+.side-label.left {
+  left: 10px;
+}
+.side-label.right {
+  right: 10px;
+}
+
+/* Pumping speaker icon */
 .subwoofer-img {
   width: 60px;
   height: auto;
-  animation: pump 1s ease-in-out infinite;
   margin-bottom: 8px;
+  animation: pump 1s ease-in-out infinite;
 }
-
-/* Label text styling */
-.label-text {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #aaa;
-  text-align: center;
-  white-space: nowrap;
-}
-
-
 
 
 /* Footer */
