@@ -1,6 +1,7 @@
 /* Base & Body */
 body {
-  background-color: #f1f1f1;
+  background: url("bg-pattern.png") no-repeat center center fixed;
+  background-size: cover;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
@@ -39,7 +40,10 @@ body {
 .content-box::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221000%22%20height%3D%2260%22%20viewBox%3D%220%200%201000%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%2C30%20C50%2C0%20150%2C60%20200%2C30%20C250%2C0%20350%2C60%20400%2C30%20C450%2C0%20550%2C60%20600%2C30%20C650%2C0%20750%2C60%20800%2C30%20C850%2C0%20950%2C60%201000%2C30%20V60%20H0%20Z%22%20fill%3D%22%23e0f7fa%22%20opacity%3D%220.5%22/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-size: 1000px 60px;
@@ -183,26 +187,24 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   max-width: 100%;
 }
 
-/* SoundCloud */
+/* SoundCloud Section */
 .soundcloud-section iframe {
   margin-top: 20px;
   max-width: 100%;
 }
 
-/* Side Labels */
+/* Side Labels - Straight, centered */
 .side-label {
   position: fixed;
   top: 50%;
   font-size: 1.5em;
   color: #aaa;
-  writing-mode: vertical-rl;
-  transform: translateY(-50%) rotate(-45deg);
-  transform-origin: center;
+  transform: translateY(-50%);
   opacity: 0.8;
   font-weight: bold;
 }
-.side-label.left { left: -20px; }
-.side-label.right { right: -20px; }
+.side-label.left { left: 0; }
+.side-label.right { right: 0; }
 
 /* Footer */
 footer {
