@@ -8,7 +8,7 @@ body {
   position: relative;
 }
 
-/* Top Accent Bar (within content-box width) */
+/* Top Accent Bar */
 .top-accent {
   height: 8px;
   background: linear-gradient(90deg, #0077cc, #00aabb);
@@ -17,37 +17,42 @@ body {
   border-radius: 4px;
 }
 
-/* Content Box with animated wave background */
+/* Animated wave background */
+@keyframes wave {
+  from { background-position: 0 0; }
+  to   { background-position: 1000px 0; }
+}
+
+/* Content Box with wave */
 .content-box {
   max-width: 900px;
   margin: 0 auto;
-  background-color: white;
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 10px;
+  background-color: white;
   position: relative;
   overflow: hidden;
 }
 
-/* Sound-wave animated background layer */
+/* Pseudo-element for wave */
 .content-box::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='600' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q 50 0 100 50 T 200 50 T 300 50 T 400 50 T 500 50 T 600 50' stroke='%23e0e0e0' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
-  opacity: 0.3;
-  animation: wave 6s linear infinite;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30 Q50 0 100 30 T200 30 V60 H0 Z' fill='%23e0f7fa' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 200px 60px;
+  animation: wave 10s linear infinite;
   pointer-events: none;
+  z-index: 0;
 }
 
-/* Wave animation keyframes */
-@keyframes wave {
-  from { transform: translateX(0); }
-  to   { transform: translateX(50%); }
+/* Ensure content sits above wave */
+.content-box > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Side Labels */
@@ -60,14 +65,10 @@ body {
   transform: translateY(-50%);
   opacity: 0.5;
 }
-.side-label.left {
-  left: 5px;
-}
-.side-label.right {
-  right: 5px;
-}
+.side-label.left { left: 5px; }
+.side-label.right { right: 5px; }
 
-/* Header - colored background inside box */
+/* Header - Light Blue Background */
 .content-box header {
   background-color: #e0f7fa;
   padding: 20px;
@@ -76,19 +77,11 @@ body {
 }
 
 /* Headers & Section Titles */
-header,
-section,
-footer {
+header, section, footer {
   margin-bottom: 30px;
 }
-h1 {
-  margin-bottom: 5px;
-}
-h2 {
-  margin-top: 0;
-  font-weight: normal;
-  color: #555;
-}
+h1 { margin-bottom: 5px; }
+h2 { margin-top: 0; font-weight: normal; color: #555; }
 .section-title {
   font-size: 1.6em;
   margin-bottom: 10px;
@@ -131,9 +124,7 @@ h2 {
   padding: 8px 0;
   border-bottom: 1px solid #ddd;
 }
-.services-list div:last-child {
-  border-bottom: none;
-}
+.services-list div:last-child { border-bottom: none; }
 
 /* Audiobooks */
 .audiobooks {
@@ -146,7 +137,6 @@ h2 {
   display: flex;
   align-items: center;
   gap: 15px;
-  justify-content: center;
 }
 .book img {
   width: 80px;
