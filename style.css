@@ -1,127 +1,32 @@
+/* Base & Body */
 body {
   background-color: #f1f1f1;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
   color: #333;
+  position: relative;
 }
 
+/* Top Accent Bar */
+.top-accent {
+  height: 8px;
+  background: linear-gradient(90deg, #0077cc, #00aabb);
+  margin-bottom: 20px;
+}
+
+/* Content Box */
 .content-box {
   max-width: 900px;
   margin: 0 auto;
   background-color: white;
-  /* To enable a slight transparency, uncomment the next line */
-  /* background-color: rgba(255, 255, 255, 0.95); */
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 10px;
 }
 
-header,
-section,
-footer {
-  margin-bottom: 30px;
-}
-
-/* Section Titles - Bold and Underlined */
-.section-title {
-  color: #222;
-  font-size: 1.8em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #ddd;
-}
-
-.email-top {
-  font-size: 0.9em;
-  margin-top: 5px;
-}
-
-/* Services Section - New styling */
-.services {
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  /* Optional: add a subtle background or border */
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-}
-.services h3 {
-  margin-bottom: 15px;
-}
-.services-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-  font-size: 1.1em;
-}
-.services-list div {
-  padding: 8px 0;
-  border-bottom: 1px solid #ddd;
-}
-.services-list div:last-child {
-  border-bottom: none;
-}
-
-/* Audiobooks */
-.audiobooks {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-.book {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-}
-.book img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-/* Preview note style */
-.note {
-  font-size: 0.9em;
-  color: #666;
-  margin-left: 5px;
-}
-
-/* Divider between sections */
-.divider {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 20px 0;
-}
-
-/* Gateway embeds styling */
-.gateway-embeds {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-.caption {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 8px;
-}
-
-/* SoundCloud & Video Section */
-.soundcloud-section iframe,
-.video-section iframe {
-  margin-top: 20px;
-}
-
-/* Side labels */
+/* Side Labels */
 .side-label {
   position: fixed;
   top: 50%;
@@ -138,9 +43,127 @@ footer {
   right: 5px;
 }
 
+/* Headers & Sections */
+header,
+section,
+footer {
+  margin-bottom: 30px;
+}
+h1 {
+  margin-bottom: 5px;
+}
+h2 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #555;
+}
+.section-title {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Email */
+.email-top a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* About */
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Services */
+.services {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+.services-list div {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.05em;
+}
+.services-list div:last-child {
+  border-bottom: none;
+}
+
+/* Audiobooks */
+.audiobooks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.book {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.book img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.book a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Preview Note */
+.note {
+  font-size: 0.9em;
+  color: #666;
+  margin-left: 5px;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Gateway Embeds */
+.gateway-embeds {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.caption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* SoundCloud & Video */
+.soundcloud-section iframe,
+.video-section iframe {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
 /* Footer */
 footer {
-  text-align: center;
   font-size: 0.9em;
   color: #777;
 }
