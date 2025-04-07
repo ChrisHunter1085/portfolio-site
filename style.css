@@ -19,11 +19,15 @@ body {
 
 /* Animated wave background */
 @keyframes wave {
-  from { background-position: 0 0; }
-  to   { background-position: 1000px 0; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
 }
 
-/* Content Box with wave */
+/* Content Box with new wave background */
 .content-box {
   max-width: 900px;
   margin: 0 auto;
@@ -36,14 +40,18 @@ body {
   overflow: hidden;
 }
 
-/* Pseudo-element for wave */
+/* New pseudo-element for sound wave background */
 .content-box::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='200' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30 Q50 0 100 30 T200 30 V60 H0 Z' fill='%23e0f7fa' opacity='0.5'/%3E%3C/svg%3E");
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  /* This data URI contains an SVG of a sound wave with multiple peaks */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221000%22%20height%3D%2260%22%20viewBox%3D%220%200%201000%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%2C30%20C50%2C0%20150%2C60%20200%2C30%20C250%2C0%20350%2C60%20400%2C30%20C450%2C0%20550%2C60%20600%2C30%20C650%2C0%20750%2C60%20800%2C30%20C850%2C0%20950%2C60%201000%2C30%20V60%20H0%20Z%22%20fill%3D%22%23e0f7fa%22%20opacity%3D%220.5%22/%3E%3C/svg%3E");
   background-repeat: repeat-x;
-  background-size: 200px 60px;
+  background-size: 1000px 60px;
   animation: wave 10s linear infinite;
   pointer-events: none;
   z-index: 0;
@@ -77,11 +85,17 @@ body {
 }
 
 /* Headers & Section Titles */
-header, section, footer {
+header,
+section,
+footer {
   margin-bottom: 30px;
 }
 h1 { margin-bottom: 5px; }
-h2 { margin-top: 0; font-weight: normal; color: #555; }
+h2 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #555;
+}
 .section-title {
   font-size: 1.6em;
   margin-bottom: 10px;
@@ -124,7 +138,9 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   padding: 8px 0;
   border-bottom: 1px solid #ddd;
 }
-.services-list div:last-child { border-bottom: none; }
+.services-list div:last-child {
+  border-bottom: none;
+}
 
 /* Audiobooks */
 .audiobooks {
