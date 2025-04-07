@@ -1,14 +1,34 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
 /* Container */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Section Titles */
+/* Section Styling */
+.section {
+  margin-bottom: 2rem;
+}
+
 .section-title {
   font-size: 1.75rem;
   font-weight: 600;
@@ -21,27 +41,28 @@
 }
 
 /* Audiobook List */
-.list .item {
+.audiobook-list {
   display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.list img {
+.audiobook-item {
+  display: flex;
+  align-items: center;
+}
+
+.cover {
   width: 96px;
   height: auto;
   border-radius: 0.5rem;
   margin-right: 1rem;
 }
 
-.list a {
+.title {
   font-size: 1.125rem;
   color: #1d4ed8;
   text-decoration: none;
-}
-
-.placeholder {
-  color: #9ca3af;
 }
 
 /* Divider */
@@ -51,7 +72,7 @@
   margin: 2rem 0;
 }
 
-/* Embeds */
+/* Embed Styling */
 .embed {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -62,6 +83,7 @@
   width: 100%;
 }
 
+/* Grid for Gateway Embeds */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -74,7 +96,7 @@
   }
 }
 
-/* Caption */
+/* Caption for Music Embeds */
 .caption {
   font-size: 0.875rem;
   color: #6b7280;
