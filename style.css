@@ -1,0 +1,82 @@
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Audiobook List */
+.list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.list img {
+  width: 96px;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.list a {
+  font-size: 1.125rem;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.placeholder {
+  color: #9ca3af;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* Embeds */
+.embed {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.soundcloud iframe,
+.video iframe {
+  width: 100%;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Caption */
+.caption {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
