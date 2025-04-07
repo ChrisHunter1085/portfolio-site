@@ -213,7 +213,7 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   50%       { transform: scale(1.1); }
 }
 
-/* Side Labels – Centered on each side with icon above text */
+/* Side Labels – Icon above text, centered vertically */
 .side-label {
   position: fixed;
   top: 50%;
@@ -222,26 +222,28 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   flex-direction: column;
   align-items: center;
   pointer-events: none;
+  width: 120px; /* enough to contain icon and text */
 }
-.side-label.left { left: 10px; }
-.side-label.right { right: 10px; }
+.side-label.left { left: 0; }
+.side-label.right { right: 0; }
 
-/* Subwoofer image styling with pump animation */
+/* Subwoofer image styling */
 .subwoofer-img {
   width: 60px;
   height: auto;
-  margin-bottom: 8px;
   animation: pump 1s ease-in-out infinite;
+  margin-bottom: 8px;
 }
 
 /* Label text styling */
 .label-text {
-  color: #aaa;
   font-size: 1.2em;
   font-weight: bold;
+  color: #aaa;
   text-align: center;
-  line-height: 1.2;
+  white-space: nowrap;
 }
+
 
 
 
