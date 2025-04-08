@@ -254,6 +254,57 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   margin-bottom: 8px;
   animation: pump 1s ease-in-out infinite;
 }
+/* Container: pinned at 900px wide, centered */
+.container {
+  width: 900px;
+  margin: 0 auto;
+  position: relative; /* side labels can be absolutely positioned inside here */
+}
+
+/* Your existing .content-box styles */
+.content-box {
+  background-color: white; /* or your wave, etc. */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* etc. */
+}
+
+/* Side labels pinned to container edges, centered vertically */
+.side-label {
+  position: absolute;    /* important: pinned inside .container */
+  top: 50%;              /* center vertically */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;        /* large text size */
+  color: #aaa;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.8;
+  pointer-events: none;  /* clicks pass through */
+}
+
+/* Left and Right edges of container */
+.side-label.left {
+  left: 0;
+}
+.side-label.right {
+  right: 0;
+}
+
+/* Pump animation for the subwoofer icon */
+@keyframes pump {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+.subwoofer-img {
+  width: 60px;
+  margin-bottom: 8px;
+  animation: pump 1s ease-in-out infinite;
+}
 
 /* Footer */
 footer {
