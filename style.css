@@ -254,39 +254,6 @@ h2 { margin-top: 0; font-weight: normal; color: #555; }
   margin-bottom: 8px;
   animation: pump 1s ease-in-out infinite;
 }
-/* Assume your content box is centered with a max-width of 900px */
-.content-box {
-    max-width: 900px;
-    margin: 0 auto;
-    /* other styles… */
-}
-
-/* Side Labels – placed relative to the content-box edges */
-.side-label {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.8em;
-  color: #aaa;
-  font-weight: bold;
-  text-align: center;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-/* 
-   Calculate the side margin: (100vw - 900px) / 2 is the left (or right) margin of the centered container.
-   Subtract an additional fixed offset (here, 70px) to position the side label into that margin.
-   Adjust the offset (70px) as needed.
-*/
-.side-label.left {
-  left: calc((100vw - 900px) / 2 - 70px);
-}
-
-.side-label.right {
-  right: calc((100vw - 900px) / 2 - 70px);
-}
-
 
 /* Footer */
 footer {
