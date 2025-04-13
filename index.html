@@ -3,217 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christopher Hunter | Audio Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Chris Hunter | Audio Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0c0c0c;
+      color: #f1f1f1;
+    }
+    header {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+    header nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero img {
+      max-width: 320px;
+      border-radius: 12px;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 9/16;
+      border-radius: 12px;
+    }
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00d4ff;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2rem;
+    }
+    .section li {
+      margin-bottom: 0.5rem;
+    }
+    .contact a {
+      color: #00d4ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 1.5rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      header img {
+        max-width: 140px;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+      .hero p, .section ul {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<!-- Left side label -->
-<div class="side-label left">
-  <img
-    src="https://cdn4.iconfinder.com/data/icons/seo-and-web-2/151/56-1024.png"
-    alt="Subwoofer"
-    class="subwoofer-img"
-  />
-  Audio Suite Recordings
-</div>
-
-<!-- Right side label -->
-<div class="side-label right">
-  <img
-    src="https://cdn4.iconfinder.com/data/icons/seo-and-web-2/151/56-1024.png"
-    alt="Subwoofer"
-    class="subwoofer-img"
-  />
-  Audio Suite Recordings
-</div>
-
-
- <div class="side-label left"></div>
-<!-- ... your main content ... -->
-<div class="side-label right"></div>
-
-  <div class="content-box">
-    <header>
-      <h1>Christopher Hunter</h1>
-      <h2>Audio Engineer | Music | Audiobooks | Voice Media</h2>
-      <p class="email-top">
-        Email: <a href="mailto:ChrisHunter@AudioSuiteRecordings.com">ChrisHunter@AudioSuiteRecordings.com</a>
-      </p>
-    </header>
-
-    <section class="about">
-      <h3 class="section-title">About</h3>
-      <p>
-        Over 15 years of experience delivering high‑quality sound for music, audiobooks, podcasts, and video.
-        Projects include work with brands with over 20M+ streams, Netflix & ESPN placements, and nationally
-        distributed audiobooks.
-      </p>
-    </section>
-
-    <section class="services">
-      <h3 class="section-title">Services</h3>
-      <div class="services-list">
-        <div>Mixing &amp; Mastering (Stereo + Stem)</div>
-        <div>Audiobook &amp; Voiceover Production</div>
-        <div>Podcast Editing &amp; Tape Syncs</div>
-        <div>Sound Design &amp; Restoration</div>
-        <div>Remote Session Recording</div>
-      </div>
-    </section>
-
-    <section class="portfolio">
-      <h3 class="section-title">
-        Audiobooks <span class="note">(click titles for preview)</span>
-      </h3>
-      <p><em>Featured on Audible</em></p>
-      <div class="audiobooks">
-        <div class="book">
-          <img src="IMG_0901 2.jpg" alt="Daddy Tell Me A Story cover" />
-          <a href="https://www.audible.com/pd/Daddy-Tell-Me-a-Story-Audiobook/B0BL68C1LH?eac_link=oSlHn5T6UzLf&ref=web_search_eac_asin_1&eac_selected_type=asin&eac_selected=B0BL68C1LH&qid=7lf9aTrnX2&eac_id=145-2210157-5073257_7lf9aTrnX2&sr=1-1" target="_blank">
-            Daddy Tell Me A Story
-          </a> by Nefertara Clark
-        </div>
-        <div class="book">
-          <img src="IMG_0900 3.jpg" alt="Suicide in Slow Motion cover" />
-          <a href="https://www.audible.com/pd/B0C3WTF58Z?source_code=ASSORAP0511160006&share_location=pdp" target="_blank">
-            Suicide in Slow Motion
-          </a> by Reagan Pettigrew
-        </div>
-        <div class="book">
-          <img src="IMG_0899 2.jpg" alt="Over the Plain Houses cover" />
-          <a href="https://www.audible.com/pd/B0BYG7YK1R?source_code=ASSORAP0511160006&share_location=pdp" target="_blank">
-            Over the Plain Houses
-          </a> by Julia Franks
-        </div>
-      </div>
-    </section>
-
-    <!-- Tape Sync Section -->
-    <section class="tapesync">
-      <h3 class="section-title">Tape Sync Projects</h3>
-      <p><em>Examples of tape‑sync work I’ve done:</em></p>
-      <div class="tapesync-embed">
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                frameborder="0" height="175"
-                style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.podcasts.apple.com/ca/podcast/42-cemeteries/id1666678354?i=1000650872903">
-        </iframe>
-        <p class="timestamp">Maureen Walton segment at ~18:00</p>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-     <section class="video-section">
-      <h3 class="section-title">Video Promo – The Gathering Spot</h3>
-      <p>This is a video promo piece that I did the audio on for The Gathering Spot.</p>
-      <iframe width="560" height="315"
-              src="https://www.youtube.com/embed/TyDPBKjJVuY?si=mCt58cN9iuWyRXMZ"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-      </iframe>
-    </section>
-
-    <section class="music-work">
-      <h3 class="section-title">Music Work</h3>
-      <p><strong>"Gateway" – Translee ft. Yung Booke, Tokyo Jetz &amp; Ink</strong></p>
-      <div class="gateway-embeds">
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                frameborder="0" height="175"
-                style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-                src="https://embed.music.apple.com/us/album/gateway-feat-translee-yung-booke-tokyo-jetz-ink/1440929497?i=1288810440">
-        </iframe>
-        <iframe style="border-radius:12px; margin-top:10px;"
-                src="https://open.spotify.com/embed/track/7g644I1smQ3ZlFWfbJSXoe?utm_source=generator"
-                width="100%" height="152" frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-        </iframe>
-      </div>
-      <div class="caption">Available on Apple Music & Spotify</div>
-    </section>
-
-    <section class="soundcloud-section">
-      <h3 class="section-title">Music</h3>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1366571431%3Fsecret_token%3Ds-KcLwfcDl6IC&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-      </iframe>
-    </section>
-
-   <section class="additional-projects">
-  <h3 class="section-title">Additional Projects</h3>
-  <div class="embed-item">
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0" height="450"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/culture-junky/925179390">
-    </iframe>
+  <header>
+    <img src="logo.png" alt="Audio Suite Recordings Logo">
+    <nav>
+      <a href="https://www.chrishunteraudio.com" target="_blank">View Full Portfolio (click here)</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <img src="IMG_0899 2.jpg" alt="Studio Photo">
+    <h2>Professional Audio Services</h2>
+    <p>Recording • Mixing • Mastering • Audiobooks • Podcasts</p>
+  </section>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/c3qoE5_13yM" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="embed-item">
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0" height="450"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/m-a-o-t-p-pt-1/1139885030">
-    </iframe>
-  </div>
-  <div class="embed-item">
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0" height="450"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/freedom-summer/1434343374">
-    </iframe>
-  </div>
-  <div class="embed-item">
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameborder="0" height="450"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/i-wish-you-love/1567252797">
-    </iframe>
-  </div>
-</section>
-<body>
-  <div class="container">
-
-    <!-- Left side label -->
-    <div class="side-label left">
-      <img
-        src="https://cdn4.iconfinder.com/data/icons/seo-and-web-2/151/56-1024.png"
-        alt="Subwoofer"
-        class="subwoofer-img"
-      />
-      Audio Suite Recordings
-    </div>
-
-    <!-- Main content box -->
-    <div class="content-box">
-      <!-- your header, about, services, portfolio, etc. -->
-    </div>
-
-    <!-- Right side label -->
-    <div class="side-label right">
-      <img
-        src="https://cdn4.iconfinder.com/data/icons/seo-and-web-2/151/56-1024.png"
-        alt="Subwoofer"
-        class="subwoofer-img"
-      />
-      Audio Suite Recordings
-    </div>
-
-  </div>
-</body>
-
-    <footer>
-      <p>Email: <a href="mailto:ChrisHunter@AudioSuiteRecordings.com">ChrisHunter@AudioSuiteRecordings.com</a></p>
-      <p class="brand-tag">Audio Suite Recordings</p>
-    </footer>
-  </div>
-
+  <section class="section">
+    <h3>Services</h3>
+    <ul>
+      <li>Recording</li>
+      <li>Mixing / Mastering</li>
+      <li>Audio Editing & Restoration</li>
+      <li>Audiobook Production</li>
+      <li>Podcast Editing</li>
+    </ul>
+  </section>
+  <section class="section">
+    <h3>About Chris Hunter</h3>
+    <p>Chris Hunter is a seasoned audio engineer and artist manager with over 15 years of hands-on experience in the music and entertainment industry. From recording and mixing full-length projects to producing audiobooks and voiceovers, Chris has built a reputation for clean, dynamic sound and professional delivery. His engineering work spans hip-hop, R&B, and commercial sound, with releases featured on Spotify, Apple Music, and major streaming platforms.</p>
+    <p>As a manager, Chris has helped develop and guide independent artists through branding, project execution, and distribution—collaborating with talents like Translee, Grey, Mike MRTN, and more. Whether in the studio or behind the scenes, Chris brings technical skill, creative vision, and a deep respect for the craft.</p>
+  </section>
+  <section class="section contact">
+    <p>Email: <a href="mailto:ChrisHunter@AudioSuiteRecordings.com">ChrisHunter@AudioSuiteRecordings.com</a></p>
+    <p>DM on Instagram: <a href="https://www.instagram.com/wavegodchris" target="_blank">@WaveGodChris</a></p>
+  </section>
+  <footer>
+    &copy; 2025 AudioSuite Recordings. All rights reserved.
+  </footer>
 </body>
 </html>
